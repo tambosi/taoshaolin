@@ -1,0 +1,54 @@
+<html>
+<head>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td><input type="text" name="nome"></td>
+        </tr>
+        <tr>
+            <td>Idade:</td>
+            <td><input type="text" name="idade"></td>
+        </tr>
+        <tr>
+            <td>Faixa:</td>
+            <td><select name="faixa" id="faixa" onchange="validarFaixa()">
+                    <option value=""></option>
+                    <option value="branca">Branca</option>
+                    <option value="amarela">Amarela</option>
+                    <option value="verde">Verde</option>
+                    <option value="marrom">Marrom</option>
+                </select>
+            </td>
+        </tr>      
+    </table>
+    <div id="turma" style="display:none;">
+        <table border="1">
+            <thead>
+                <td>Shaolin do Norte</td>
+                <td>Shuaijiao</td>
+                <td>Aula Especial</td>
+            </thead>
+            <tr>
+                <td><select name="shaolin" id="shaolin" onchange="calcular()">
+                    <option value=""></option>                        
+                    </select>
+                </td>
+                <td><select name="shuai" id="shuai" onchange="calcular()">
+                    <option value=""></option>
+                    </select>
+                </td>
+                <td><select name="especial" id="especial" onchange="calcular()">
+                    <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+        </table>        
+    </div>
+    <div id="pagamento" style="display:none;">
+        <p id="mensagem"></p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
